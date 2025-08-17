@@ -501,8 +501,8 @@ const CryptoDashboard: React.FC = () => {
   const currentTimeframe = TIMEFRAMES.find(tf => tf.value === selectedTimeframe);
 
   return (
-    <div className="min-h-screen bg-black p-4">
-      <div className="max-w-5xl mx-auto">
+    <div className="min-h-screen bg-black p-6">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="sticky top-0 z-50 bg-black/95 backdrop-blur-lg border-b border-white/10 pb-6 mb-8">
           <div className="flex items-center justify-between mb-4">
@@ -514,8 +514,9 @@ const CryptoDashboard: React.FC = () => {
                 <h1 className="text-2xl font-bold text-white mb-2">
                   {currentCoin.name} ({currentCoin.symbol}) ড্যাশবোর্ড
                 </h1>
+                <p className="text-sm text-white/70">রিয়েল-টাইম OHLCV ডেটা ও চার্ট বিশ্লেষণ</p>
                 <div className="flex items-center space-x-6 mt-4">
-                  <div className={`text-4xl font-bold text-white transition-all duration-500 ${
+                  <div className={`text-6xl font-bold text-white transition-all duration-500 ${
                     priceAnimation ? 'scale-110 text-yellow-400 animate-pulse' : 'scale-100'
                   }`}>
                     {formatPrice(currentPrice)}
