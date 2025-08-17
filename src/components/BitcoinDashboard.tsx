@@ -538,28 +538,28 @@ const CryptoDashboard: React.FC = () => {
             
             {/* Stats in Header */}
             <div className="flex items-center space-x-6 mr-6">
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl shadow-lg border border-white/10 p-3">
+              <div className="bg-white/5 backdrop-blur-lg rounded-xl shadow-lg border border-white/10 p-4">
                 <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center">
-                    <TrendingUp className="w-4 h-4 text-green-400" />
+                  <div className="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center">
+                    <TrendingUp className="w-5 h-5 text-green-400" />
                   </div>
                   <div>
                     <div className="text-xs text-white/70">সর্বোচ্চ দাম</div>
-                    <div className="text-sm font-bold text-green-400">
+                    <div className="text-base font-bold text-green-400">
                       {ohlcvData.length > 0 ? formatPrice(Math.max(...ohlcvData.map(d => d.high))) : '$0'}
                     </div>
                   </div>
                 </div>
               </div>
               
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl shadow-lg border border-white/10 p-3">
+              <div className="bg-white/5 backdrop-blur-lg rounded-xl shadow-lg border border-white/10 p-4">
                 <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-red-500/20 rounded-full flex items-center justify-center">
-                    <TrendingDown className="w-4 h-4 text-red-400" />
+                  <div className="w-10 h-10 bg-red-500/20 rounded-full flex items-center justify-center">
+                    <TrendingDown className="w-5 h-5 text-red-400" />
                   </div>
                   <div>
                     <div className="text-xs text-white/70">সর্বনিম্ন দাম</div>
-                    <div className="text-sm font-bold text-red-400">
+                    <div className="text-base font-bold text-red-400">
                       {ohlcvData.length > 0 ? formatPrice(Math.min(...ohlcvData.map(d => d.low))) : '$0'}
                     </div>
                   </div>
